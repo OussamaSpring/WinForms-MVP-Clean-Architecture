@@ -286,6 +286,7 @@ Dependencies always point inward.
 
 ```plaintext
 Presentation ? UseCases ? Core
+Presentation ? UseCases ? Core
 Data ? Core
 
 ```
@@ -323,6 +324,12 @@ public partial class SampleItemForm : Form
 
 ```
 ---
+
+# Demo App
+
+An example application built on this template is available here:
+
+- https://github.com/OussamaSpring/TodoApp
 
 # SOLID Principles
 

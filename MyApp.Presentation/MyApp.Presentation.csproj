@@ -62,7 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\ServiceConfigurator.cs" />
-    <Compile Include="Factories\AppFactory.cs" />
     <Compile Include="Presenters\SampleItemPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
