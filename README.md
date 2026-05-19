@@ -1,4 +1,4 @@
-# MyApp - WinForms MVP Clean Architecture Template (.NET Framework 4.8)
+﻿# MyApp - WinForms MVP Clean Architecture Template (.NET Framework 4.8)
 
 ## Overview
 
@@ -50,10 +50,10 @@ Where:
 
 ```plaintext
 /MyApp.sln
- ??? MyApp.Core
- ??? MyApp.UseCases
- ??? MyApp.Data
- ??? MyApp.Presentation
+ ├── MyApp.Core
+ ├── MyApp.UseCases
+ ├── MyApp.Data
+ └── MyApp.Presentation
 
 ```
 ---
@@ -82,11 +82,11 @@ This project must NOT depend on any other project.
 
 ```plaintext
 MyApp.Core
- ??? Entities
- ??? Enums
- ??? Interfaces
- ?    ??? Repositories
- ??? ValueObjects
+ ├── Entities
+ ├── Enums
+ ├── Interfaces
+ │    └── Repositories
+ └── ValueObjects
 
 ```
 ## Example Classes
@@ -160,9 +160,9 @@ Contains persistence implementations.
 
 ```plaintext
 MyApp.Data
- ??? Context
- ??? Repositories
- ??? Configurations
+ ├── Context
+ ├── Repositories
+ └── Configurations
 
 ```
 This project implements interfaces defined in `MyApp.Core`.
@@ -189,15 +189,15 @@ Uses the MVP pattern.
 
 ```plaintext
 MyApp.Presentation
- ??? Views
- ?    ??? Interfaces
- ?    ??? Forms
- ?
- ??? Presenters
- ?
- ??? Configuration
- ?
- ??? Program.cs
+ ├── Views
+ │    ├── Interfaces
+ │    └── Forms
+ │
+ ├── Presenters
+ │
+ ├── Configuration
+ │
+ └── Program.cs
 
 ```
 ---
@@ -268,13 +268,13 @@ Example:
 
 ```plaintext
 View
- ?
+ ↓
 SampleItemDto
- ?
+ ↓
 UseCase
- ?
+ ↓
 Entity
- ?
+ ↓
 Repository
 
 ```
@@ -285,15 +285,15 @@ Repository
 Dependencies always point inward.
 
 ```plaintext
-Presentation ? UseCases ? Core
-Data ? Core
+Presentation → UseCases → Core
+Data → Core
 
 ```
 Forbidden dependencies:
 
-- Core ? anything
-- UseCases ? Data
-- Presentation ? Data directly
+- Core → anything
+- UseCases → Data
+- Presentation → Data directly
 
 ---
 
