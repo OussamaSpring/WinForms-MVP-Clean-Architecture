@@ -286,7 +286,6 @@ Dependencies always point inward.
 
 ```plaintext
 Presentation ? UseCases ? Core
-Presentation ? UseCases ? Core
 Data ? Core
 
 ```
